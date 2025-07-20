@@ -1,0 +1,154 @@
+/* not-found.component.css */
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.error-code {
+  font-size: 12rem;
+  font-weight: 800;
+  color: #3a86ff;
+  opacity: 0.2;
+  line-height: 1;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+
+.error-message {
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  z-index: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: #718096;
+  line-height: 1.6;
+}
+
+.home-button {
+  background: #3a86ff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+  z-index: 1;
+}
+
+.home-button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(58, 134, 255, 0.4);
+}
+
+/* Decorative elements */
+.graphic-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.broken-chain {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 6px dashed #ff006e;
+  border-radius: 50%;
+  top: 30%;
+  right: 20%;
+  opacity: 0.2;
+  animation: rotate 20s linear infinite;
+}
+
+.planet {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(145deg, #8338ec, #3a86ff);
+  border-radius: 50%;
+  bottom: 20%;
+  left: 15%;
+  opacity: 0.15;
+}
+
+.satellite {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #ff006e;
+  border-radius: 50%;
+  top: 20%;
+  left: 20%;
+  opacity: 0.1;
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, 30px); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 8rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .home-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  .broken-chain {
+    right: 10%;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 6rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+}

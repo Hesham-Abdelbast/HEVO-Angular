@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HevoColorFontComponent } from "./shared/components/layout/hevo-color-font/hevo-color-font.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [HevoColorFontComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

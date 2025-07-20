@@ -1,0 +1,74 @@
+<button (click)="toggleWindow()" class="floating-btn" [ngClass]="!isRtl ? 'rtl' : 'ltr'">
+  <i class="fas fa-palette text-white" style="font-size: 22px;"></i> {{'Customize'|translate}}
+</button>
+
+<div *ngIf="openDrawer" class="backdrop" (click)="toggleWindow()">
+  <div class="drawer" [ngClass]="drawerDirection" [class.open]="openDrawer" (click)="$event.stopPropagation()"
+    role="dialog" aria-labelledby="settings-heading">
+
+    <div class="drawer-header">
+      <h2 id="settings-heading" class="drawer-title">
+        <i class="fas fa-palette icon-spacing"></i>
+        Appearance
+      </h2>
+      <button class="close-btn" (click)="openDrawer = false" aria-label="Close settings">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="settings-group">
+      <h3 class="settings-subtitle">
+        <i class="fas fa-paint-brush icon-spacing"></i>
+        Select Theme
+      </h3>
+      <div class="theme-options">
+        <button class="theme-btn light" (click)="setTheme('light')">
+          <i class="fas fa-sun"></i>
+          Light
+        </button>
+        <button class="theme-btn dark" (click)="setTheme('dark')">
+          <i class="fas fa-moon"></i>
+          Dark
+        </button>
+        <button class="theme-btn blue" (click)="setTheme('blue')">
+          <i class="fas fa-droplet"></i>
+          Blue
+        </button>
+        <button class="theme-btn purple" (click)="setTheme('purple')">
+          <i class="fas fa-hat-wizard"></i>
+          Purple
+        </button>
+      </div>
+    </div>
+
+    <!-- Divider Line -->
+    <div class="divider"></div>
+
+    <div class="settings-group">
+      <h3 class="settings-subtitle">
+        <i class="fas fa-font icon-spacing"></i>
+        Select Font
+      </h3>
+      <div class="font-options">
+        <button class="font-btn serif" (click)="setFont('Inter')">
+          <i class="fas fa-text-height"></i>
+          Inter
+        </button>
+        <button class="font-btn sans" (click)="setFont('Roboto')">
+          <i class="fas fa-text-width"></i>
+          Roboto
+        </button>
+        <button class="font-btn mono" (click)="setFont('Montserrat')">
+          <i class="fas fa-code"></i>
+          Montserrat
+        </button>
+        <button class="font-btn cursive" (click)="setFont('Lato')">
+          <i class="fas fa-italic"></i>
+          Lato
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

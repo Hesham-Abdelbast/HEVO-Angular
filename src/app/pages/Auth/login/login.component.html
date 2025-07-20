@@ -1,0 +1,110 @@
+<div class="container">
+  <div class="brand-section">
+    <div class="brand-content">
+      <div class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-shopping-bag"></i>
+        </div>
+        <div class="logo-text">HEVO</div>
+      </div>
+      <h1>{{ 'BRAND.TITLE' | translate }}</h1>
+      <p>{{ 'BRAND.DESCRIPTION' | translate }}</p>
+
+      <div class="features">
+        <div class="feature">
+          <i class="fas fa-truck"></i>
+          <div>{{ 'BRAND.FEATURES.SHIPPING' | translate }}</div>
+        </div>
+        <div class="feature">
+          <i class="fas fa-shield-alt"></i>
+          <div>{{ 'BRAND.FEATURES.SECURE_PAYMENT' | translate }}</div>
+        </div>
+        <div class="feature">
+          <i class="fas fa-undo"></i>
+          <div>{{ 'BRAND.FEATURES.RETURNS' | translate }}</div>
+        </div>
+        <div class="feature">
+          <i class="fas fa-headset"></i>
+          <div>{{ 'BRAND.FEATURES.SUPPORT' | translate }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="login-section">
+    <div class="login-header">
+      <div class="language-selector">
+        <i class="fas fa-globe"></i>
+        <select [(ngModel)]="selectedLanguage" (change)="onLanguageChange(selectedLanguage)">
+          <option [value]="enLang">English</option>
+          <option [value]="arLang">العربية</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="welcome-text">
+      <h2>{{ 'LOGIN.WELCOME' | translate }}</h2>
+      <p>{{ 'LOGIN.SUBTEXT' | translate }}</p>
+    </div>
+
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSignInClick()">
+
+      <div class="input-group">
+        <div class="input-group_sub">
+          <i class="fas fa-envelope input-icon-left"></i>
+          <input type="email" id="email" placeholder="{{ 'LOGIN.EMAIL' | translate }}" required formControlName="email">
+        </div>
+        <div class="error" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.errors">
+          <span *ngIf="loginForm.get('email')?.errors?.['required']">
+            Email is required
+          </span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <div class="input-group_sub">
+          <i class="fas fa-lock input-icon-left"></i>
+          <input [type]="showPassword ? 'text' : 'password'" placeholder="{{ 'LOGIN.PASSWORD' | translate }}" required
+            formControlName="password">
+
+          <i class="fas" [class.fa-eye]="!showPassword" [class.fa-eye-slash]="showPassword" (click)="togglePassword()"
+           ngClass="input-icon-right" tabindex="0" role="button" aria-label="Toggle password visibility"></i>
+        </div>
+        <div class="error" *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched">
+          <span *ngIf="loginForm.get('password')?.errors?.['required']">
+            Password is required
+          </span>
+        </div>
+      </div>
+
+      <div class="options">
+        <div class="remember">
+          <input type="checkbox" id="remember">
+          <label for="remember">{{ 'LOGIN.REMEMBER_ME' | translate }}</label>
+        </div>
+        <a href="#" class="forgot-password">{{ 'LOGIN.FORGOT_PASSWORD' | translate }}</a>
+      </div>
+
+      <button class="btn btn-login" type="submit">
+        <i class="fas fa-sign-in-alt"></i>
+        {{ 'LOGIN.SIGN_IN' | translate }}
+      </button>
+
+      <div class="divider">{{'LOGIN.OR_CONTINUE'|translate}}</div>
+
+      <button class="btn btn-google">
+        <i class="fab fa-google"></i>
+        {{ 'LOGIN.SIGN_IN_GOOGLE' | translate }}
+      </button>
+
+      <div class="signup">
+        {{'LOGIN.SIGN_UP_PROMPT' | translate }} <a (click)="NavToRegist()">{{ 'LOGIN.CREATE_ACCOUNT' | translate }}</a>
+      </div>
+    </form>
+
+    <div class="copyright">
+      &copy; {{'FOOTER.COPYRIGHT'|translate}}<br>
+      <a href="#">{{'FOOTER.PRIVACY'|translate}}</a> | <a href="#">{{'FOOTER.TERMS'|translate}}</a>
+    </div>
+  </div>
+</div>

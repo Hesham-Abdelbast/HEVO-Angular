@@ -10,3 +10,7 @@ dist
 
 package-lock.json
 
+.angular
+.angular.json
+
+.vscode

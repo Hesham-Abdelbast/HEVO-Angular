@@ -1,0 +1,55 @@
+{
+  "Customize":"Customize",
+  "BRAND": {
+    "TITLE": "Your Ultimate Shopping Destination",
+    "DESCRIPTION": "Discover millions of products across all categories. From electronics to fashion, home goods to groceries - HEVO has everything you need at unbeatable prices.",
+    "FEATURES": {
+      "SHIPPING": "Free shipping on orders over 500 EGP",
+      "SECURE_PAYMENT": "Secure payment processing",
+      "RETURNS": "Easy 30-day returns",
+      "SUPPORT": "24/7 customer support"
+    }
+  },
+  "LOGIN": {
+    "LANGUAGE": "Language",
+    "WELCOME": "Welcome to HEVO",
+    "SUBTEXT": "Sign in to access your account and start shopping",
+    "EMAIL": "Email Address",
+    "PASSWORD": "Password",
+    "REMEMBER_ME": "Remember me",
+    "FORGOT_PASSWORD": "Forgot Password?",
+    "SIGN_IN": "Sign In",
+    "OR_CONTINUE": "or continue with",
+    "SIGN_IN_GOOGLE": "Sign in with Google",
+    "SIGN_UP_PROMPT": "New to HEVO?",
+    "CREATE_ACCOUNT": "Create Account"
+  },
+  "FOOTER": {
+    "COPYRIGHT": "2023 HEVO Marketplace. All rights reserved.",
+    "PRIVACY": "Privacy Policy",
+    "TERMS": "Terms of Service"
+  },
+  "REGISTER": {
+    "JOIN_US": "Join Our Shopping Community",
+    "JOIN_US_SUBTEXT": "Create your HEVO account to access exclusive deals, track orders, and enjoy a personalized shopping experience across all categories.",
+    "TITLE": "Create Your HEVO Account",
+    "SUBTEXT": "Join HEVO to unlock exclusive benefits and personalized shopping",
+    "FIRSTNAME": "First Name",
+    "LASTNAME": "Last Name",
+    "EMAIL": "Email Address",
+    "PHONENUMBER": "Phone Number",
+    "ADDRESS": "Address",
+    "PASSWORD": "Password",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "AGREE_TERMS": "I agree to the Terms and Conditions",
+    "CREATE_ACCOUNT": "Create Account",
+    "ALREADY_MEMBER": "Already have an account?",
+    "SIGN_IN_GOOGLE": "Sign in with Google",
+    "SIGN_IN": "Sign In"
+  },
+  "PASSWORD_STRENGTH": {
+    "WEAK": "Weak",
+    "MEDIUM": "Medium",
+    "STRONG": "Strong"
+  }
+}
