@@ -55,7 +55,7 @@
       style="margin-top: 20px;">
 
       <!-- First Name -->
-      <div class="input-group">
+      <div class="input-group" [attr.dir]="isRtl ? 'rtl' : 'ltr'">
         <div class="input-group_sub">
           <i class="fas fa-user input-icon-left"></i>
           <input type="text" [placeholder]="'REGISTER.FIRSTNAME' | translate" formControlName="firstname" />
@@ -72,7 +72,7 @@
       </div>
 
       <!-- Last Name -->
-      <div class="input-group">
+      <div class="input-group" [attr.dir]="isRtl ? 'rtl' : 'ltr'">
         <div class="input-group_sub">
           <i class="fas fa-user input-icon-left"></i>
           <input type="text" [placeholder]="'REGISTER.LASTNAME' | translate" formControlName="lastname" />
@@ -89,7 +89,7 @@
       </div>
 
       <!-- Email -->
-      <div class="input-group">
+      <div class="input-group" [attr.dir]="isRtl ? 'rtl' : 'ltr'">
         <div class="input-group_sub">
           <i class="fas fa-envelope input-icon-left"></i>
           <input type="email" [placeholder]="'REGISTER.EMAIL' | translate" formControlName="email" />
@@ -108,7 +108,7 @@
       </div>
 
       <!-- Phone Number -->
-      <div class="input-group">
+      <div class="input-group" [attr.dir]="isRtl ? 'rtl' : 'ltr'">
         <div class="input-group_sub">
           <i class="fas fa-phone input-icon-left"></i>
           <input type="text" appOnlyNumbers [placeholder]="'REGISTER.PHONENUMBER' | translate"
@@ -123,7 +123,7 @@
       </div>
 
       <!-- Address -->
-      <div class="input-group">
+      <div class="input-group" [attr.dir]="isRtl ? 'rtl' : 'ltr'">
         <div class="input-group_sub">
           <i class="fas fa-location-dot input-icon-left"></i>
           <input type="text" [placeholder]="'REGISTER.ADDRESS' | translate" formControlName="address" />
@@ -139,7 +139,7 @@
       </div>
 
       <!-- Password -->
-      <div class="input-group">
+      <div class="input-group" [attr.dir]="isRtl ? 'rtl' : 'ltr'">
         <div class="input-group_sub">
           <i class="fas fa-lock input-icon-left"></i>
           <input [type]="showPassword ? 'text' : 'password'" [placeholder]="'REGISTER.PASSWORD' | translate"
@@ -168,7 +168,7 @@
       </div>
 
       <!-- Confirm Password -->
-      <div class="input-group">
+      <div class="input-group" [attr.dir]="isRtl ? 'rtl' : 'ltr'">
         <div class="input-group_sub">
           <i class="fas fa-lock input-icon-left"></i>
           <input type="password" [placeholder]="'REGISTER.CONFIRM_PASSWORD' | translate"

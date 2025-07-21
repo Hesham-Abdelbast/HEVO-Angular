@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@angular/core';
-import { AppConstant } from '../../../shared/helper/app-constant';
-import { LocalStorageService } from '../shared/local-storage.service';
 import { DOCUMENT } from '@angular/common';
+import { LocalStorageService } from '../local-storage.service';
+import { AppConstant } from '../../../../shared/helper/app-constant';
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {

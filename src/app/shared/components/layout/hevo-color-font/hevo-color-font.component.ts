@@ -1,10 +1,10 @@
 import { LocalStorageService } from './../../../../core/services/shared/local-storage.service';
 import { Component } from '@angular/core';
-import { ThemeService } from '../../../../core/services/Theme/theme-service.service';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { AppConstant } from '../../../helper/app-constant';
 import { RouterOutlet } from '@angular/router';
+import { ThemeService } from '../../../../core/services/shared/Theme/theme-service.service';
 
 @Component({
   selector: 'app-hevo-color-font',
@@ -18,6 +18,16 @@ export class HevoColorFontComponent {
   drawerDirection: 'left' | 'right' = 'right';
   currentLanguage!: string;
   isRtl = false;
+  //fonts prop English
+  public GameFont = AppConstant.APP_FONT_GAME;
+  public PacificoFont = AppConstant.APP_FONT_PACIFICO;
+  public PrataFont = AppConstant.APP_FONT_PRATA;
+
+  //fonts prop Arbic
+  public kufiFont = AppConstant.APP_FONT_kufi;
+  public beirutiFont = AppConstant.APP_FONT_beiruti;
+  public gulzarFont = AppConstant.APP_FONT_gulzar;
+  public amiriFont = AppConstant.APP_FONT_amiri;
 
   constructor(
     private themeService: ThemeService,

@@ -8,7 +8,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { LanguageService } from '../../../core/services/shared/language.service';
 import { AuthService } from '../../../core/services/Auth/auth.service';
 import { Router } from '@angular/router';
@@ -34,12 +34,15 @@ export class LoginComponent {
     private authService: AuthService,
     private router: Router,
     private fb: FormBuilder,
-    private toastService: ToastService
+    private toastService: ToastService,
+    private translateService: TranslateService
   ) {
     this.loginForm = fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
     });
+    var lang = translateService.currentLang;
+    languageService.ChangeLang(lang);
   }
 
   onLanguageChange(language: string): void {
@@ -76,5 +79,9 @@ export class LoginComponent {
 
   togglePassword() {
     this.showPassword = !this.showPassword;
+  }
+
+  get isRtl(): boolean {
+    return this.translateService.currentLang === AppConstant.APP_Lang_AR;
   }
 }

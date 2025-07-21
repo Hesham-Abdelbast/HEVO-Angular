@@ -2,9 +2,9 @@
 export const Base_URL = 'https://localhost:44335/';
 
 export const URLs = {
-  LOGIN : 'Login',
-  REGISTER: 'Register',
-  HOME : 'Home',
+  LOGIN : 'login',
+  REGISTER: 'register',
+  HOME : 'home',
 }
 
 export class AuthURLs {

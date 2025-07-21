@@ -1,7 +1,7 @@
 import { ToastService } from './../../../core/services/shared/toast.service';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { LanguageService } from '../../../core/services/shared/language.service';
 import { AuthService } from '../../../core/services/Auth/auth.service';
 import { AppConstant } from '../../../shared/helper/app-constant';
@@ -18,6 +18,7 @@ import { RegisterM } from '../../../models/Auth/register-m';
 import { UserRoles } from '../../../shared/helper/user-roles';
 import { FieldMatchDirective } from '../../../shared/directives/field-match.directive';
 import { OnlyNumbersDirective } from '../../../shared/directives/only-numbers.directive';
+import { LocalStorageService } from '../../../core/services/shared/local-storage.service';
 
 @Component({
   selector: 'app-registration',
@@ -50,7 +51,9 @@ export class RegistrationComponent {
     private languageService: LanguageService,
     private authService: AuthService,
     private router: Router,
-    private toastService: ToastService
+    private toastService: ToastService,
+    private translateService:TranslateService,
+    private localStorageService:LocalStorageService
   ) {
     this.registrationForm = new FormBuilder().group({
       firstname: ['', [Validators.required, Validators.minLength(2)]],
@@ -64,6 +67,8 @@ export class RegistrationComponent {
     });
     this.passwordStrength = 0;
     this.passwordStrengthText = '';
+    this.selectedLanguage = localStorageService.getValue(AppConstant.LANG_CODE);
+    languageService.ChangeLang(this.selectedLanguage);
   }
 
   onLanguageChange(language: string): void {
@@ -144,4 +149,7 @@ export class RegistrationComponent {
   togglePassword() {
     this.showPassword = !this.showPassword;
   }
+  get isRtl(): boolean {
+  return this.translateService.currentLang === AppConstant.APP_Lang_AR;
+}
 }

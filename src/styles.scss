@@ -1,11 +1,71 @@
 @import url('../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
 @import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
 
+//Import Fonts
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Pacifico&family=Prata&display=swap');
+// 1 --> Games
+.bitcount-prop-single-Games {
+  font-family: "Bitcount Prop Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+// 2 --> Pacifico
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// 3 --> prata
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//Arbic Fonts
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Beiruti:wght@200..900&family=Gulzar&family=Reem+Kufi:wght@400..700&display=swap');
+
+//1--> Reem Kufi كوفي
+.reem-kufi-font {
+  font-family: "Reem Kufi", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//2-->gulzar
+.gulzar-regular {
+  font-family: "Gulzar", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+//3-->Beiruti
+
+.beiruti-font {
+  font-family: "Beiruti", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+//4-->Amiri
+.amiri-quran-regular {
+  font-family: "Amiri Quran", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -31,4 +91,11 @@ body {
   color: #e11d48;
   font-size: 0.8rem;
   padding: 0 0.8rem;
+}
+
+
+//Color Setting
+
+.Light{
+  --bg:#ffffff;
 }

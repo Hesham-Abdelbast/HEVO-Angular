@@ -1,5 +1,10 @@
 {
-  "Customize":"Customize",
+  "CUSTOMIZE":{
+    "TITLE":"Customize",
+    "Appearance":"Appearance",
+    "SELECTTHEME":"Select Theme",
+    "SELECTFONT":"Select Font"
+  },
   "BRAND": {
     "TITLE": "Your Ultimate Shopping Destination",
     "DESCRIPTION": "Discover millions of products across all categories. From electronics to fashion, home goods to groceries - HEVO has everything you need at unbeatable prices.",
